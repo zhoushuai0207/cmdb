@@ -1,0 +1,20 @@
+##### 创建项目命令
+bee api cmdb -conn="root:123456@tcp(127.0.0.1:3306)/cmdb"
+
+##### 热编译命令
+bee run
+bee run watchall true
+# 文档
+bee run -gendoc=true
+# 下载swagger
+bee run -downdoc=true
+
+##### 打包命令
+bee packa
+
+##### 生成文档API
+bee generate docs
+
+##### 测试用例
+go test -v
+go test -v <filename>
