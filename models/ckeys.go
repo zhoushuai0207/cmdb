@@ -11,12 +11,12 @@ import (
 )
 
 type Ckeys struct {
-	Id         int       `orm:"column(id);auto"`
-	Name       string    `orm:"column(name);size(255)"`
-	Key        string    `orm:"column(key);size(255)"`
-	Cobject    *Cobject  `orm:"column(cobject);rel(fk)"`
-	CreateTime time.Time `orm:"column(create_time);type(datetime);auto_now_add"`
-	UdpateTime time.Time `orm:"column(udpate_time);type(datetime);null;auto_now"`
+	Id         int       `orm:"column(id);auto" json:"id"`
+	Name       string    `orm:"column(name);size(255)" json:"name"`
+	Key        string    `orm:"column(key);size(255)" json:"key"`
+	Cobject    *Cobject  `orm:"column(cobject);rel(fk)" json:"cobject"`
+	CreateTime time.Time `orm:"column(create_time);type(datetime);auto_now_add" json:"create_time"`
+	UdpateTime time.Time `orm:"column(udpate_time);type(datetime);null;auto_now" json:"udpate_time"`
 }
 
 func (t *Ckeys) TableName() string {

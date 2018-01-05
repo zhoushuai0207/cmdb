@@ -12,7 +12,7 @@ import (
 
 type Clog struct {
 	Id         int       `orm:"column(id);auto"`
-	Cobject    *Cobject  `orm:"column(cobject);rel(fk)"`
+	Cobject    *Cobject  `orm:"column(cobject);rel(fk);null"`
 	Title      string    `orm:"column(title);size(255)"`
 	Detail     string    `orm:"column(detail);size(255);null"`
 	Result     string    `orm:"column(result);size(255);null"`

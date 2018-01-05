@@ -9,10 +9,11 @@ import (
 	"github.com/astaxie/beego/orm"
 )
 
+// 默认的key
 type Cdkey struct {
-	Id   int    `orm:"column(id);auto"`
-	Name string `orm:"column(name);size(255)"`
-	Key  string `orm:"column(key);size(255)"`
+	Id   int    `orm:"column(id);auto" json:"id"`
+	Name string `orm:"column(name);size(255)" json:"name"`
+	Key  string `orm:"column(key);size(255)" json:"key"`
 }
 
 func (t *Cdkey) TableName() string {
