@@ -1,3 +1,13 @@
+##### 思路
+一切皆对象
+##### 架构
+object 资源对象
+ckeys(attr)   资源属性
+coperation 资源行为（确定资源有哪些操作）
+clink(过期了  ctype 代替)  资源类型（用于确定资源关系）
+ctype  资源类型（用于确定资源关系）
+clog  资源日志（资源操作日志）
+cview  资源视图（资源展示方式）
 ##### 创建项目命令
 bee api cmdb -conn="root:123456@tcp(127.0.0.1:3306)/cmdb"
 
@@ -18,3 +28,5 @@ bee generate docs
 ##### 测试用例
 go test -v
 go test -v <filename>
+
+
